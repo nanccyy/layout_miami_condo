@@ -1,0 +1,39 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 413px);
+  justify-content: space-between;
+   
+  &__text {
+    display: grid;
+    grid-template-columns: repeat(2, 152px);
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 193%;
+    color: $active-color;
+    padding-bottom: 8px;
+  }
+
+  &__format {
+    margin-bottom: 24px;
+    color: inherit;
+    transition: color $hover-duration;
+
+    &--phone:hover,
+    &--email:hover {
+      color: $highlight-color;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .contact {
+    grid-template-columns: 1fr;
+   
+    &__text {
+      grid-template-columns: 1fr;
+    }
+  }
+}
